@@ -15,7 +15,7 @@ Este repositório contém um backend simples em Node.js/Express que serve um fro
 ---
 
 ## Rodando localmente (modo rápido, sem banco)
-1. Abra um terminal na raiz do projeto (`c:\Projetos\UNIVESP-P.I.-2`).
+1. Abra um terminal na raiz do projeto.
 2. Instale dependências:
 
 ```powershell
@@ -212,12 +212,3 @@ curl -X POST http://localhost:3000/api/agendar -H "Content-Type: application/jso
 - Adicionar uma `UNIQUE` constraint para `(data_agendamento, hora)` e tratar a violação no servidor (retornar 409 Conflict).
 - Adicionar `dotenv` para facilitar variáveis locais e um `.env.example` (já há um `.env.example` no repo).
 - Adicionar `docker-compose.yml` ao repo para facilitar a reprodução do ambiente (posso criar se desejar).
-
----
-
-Se quiser, eu posso automaticamente:
-- adicionar `docker-compose.yml` e `Dockerfile` ao repositório,
-- adicionar instruções específicas para macOS/Linux,
-- criar um script `make` ou `npm run local` que configure o ambiente e rode tudo.
-
-Diga qual desses você prefere que eu adicione agora.
