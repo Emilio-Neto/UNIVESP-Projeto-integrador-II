@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Painel do Barbeiro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a href="#main" class="skip-link">Pular para o conteúdo</a>
+    <main id="main" class="container" role="main">
+        <div class="a11y-toolbar" aria-label="Controles de acessibilidade">
+            <button id="a11y-font-decrease" aria-label="Diminuir fonte">A-</button>
+            <button id="a11y-font-reset" aria-label="Restaurar fonte">A</button>
+            <button id="a11y-font-increase" aria-label="Aumentar fonte">A+</button>
+            <button id="a11y-contrast" aria-pressed="false" aria-label="Alternar alto contraste">Contraste</button>
+        </div>
+        <h1>Olá, Tizil</h1>
+        <p>Selecione uma data para ver os agendamentos.</p>
+        
+        <input type="date" id="data-agendamentos">
+        
+        <h2>Agendamentos do Dia <span id="contador-agendamentos">(0)</span></h2>
+        <ul id="lista-agendamentos">
+        </ul>
+    </div>
+
+    <script src="a11y.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>

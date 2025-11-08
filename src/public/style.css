@@ -1,0 +1,192 @@
+/* public/style.css */
+:root {
+    --bg: #f4f4f4;
+    --text: #333;
+    --panel-bg: #ffffff;
+    --primary: #2c3e50;
+    --accent: #3498db;
+    --muted: #eee;
+    --button-bg: #2ecc71;
+    --button-bg-hover: #27ae60;
+    --btn-outline: #3498db;
+}
+
+.dark {
+    --bg: #121212;
+    --text: #e6e6e6;
+    --panel-bg: #1e1e1e;
+    --primary: #e6eef6;
+    --accent: #4aa3ff;
+    --muted: #2a2a2a;
+    --button-bg: #28a745;
+    --button-bg-hover: #218838;
+    --btn-outline: #4aa3ff;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+}
+.container {
+    background-color: var(--panel-bg);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+    width: 90%;
+    max-width: 600px;
+    position: relative;
+}
+.logo-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.logo {
+    max-width: 220px;
+    height: auto;
+    display: block;
+}
+h1, h2 {
+    color: var(--primary);
+    text-align: center;
+}
+input[type="date"], input[type="text"], input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.horarios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 10px;
+    margin-top: 20px;
+}
+.horario-btn {
+    padding: 12px;
+    border: 1px solid var(--btn-outline);
+    background-color: rgba(52,152,219,0.08);
+    color: var(--btn-outline);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.horario-btn:hover {
+    background-color: var(--btn-outline);
+    color: white;
+}
+#formulario-cliente {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid var(--muted);
+}
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--button-bg);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+button:hover {
+    background-color: var(--button-bg-hover);
+}
+.hidden {
+    display: none;
+}
+#lista-agendamentos {
+    list-style: none;
+    padding: 0;
+}
+#lista-agendamentos li {
+    background-color: var(--muted);
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+/* theme toggle removed — toolbar no longer contains theme button */
+
+/* Skip link (visible on keyboard focus) */
+.skip-link {
+    position: absolute;
+    left: -999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+.skip-link:focus {
+    left: 12px;
+    top: 12px;
+    width: auto;
+    height: auto;
+    background: var(--accent);
+    color: white;
+    padding: 8px 12px;
+    z-index: 9999;
+    border-radius: 4px;
+}
+
+/* Accessibility toolbar: positioned near top-right, next to theme toggle */
+.a11y-toolbar {
+    /* full-width toolbar centered horizontally inside the container */
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center; /* center relative to left/right edges */
+    margin-bottom: 28px; /* larger spacing from logo */
+    flex-wrap: nowrap; /* keep buttons in a single row */
+}
+.a11y-toolbar button {
+    background: var(--panel-bg);
+    color: var(--text);
+    border: 1px solid rgba(0,0,0,0.12);
+    padding: 0 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 1;
+    height: 40px; /* uniform height */
+    min-width: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.dark .a11y-toolbar button {
+    border-color: rgba(255,255,255,0.12);
+}
+.a11y-contrast .a11y-toolbar button {
+    background: #000;
+    color: #fff;
+    border-color: #fff;
+}
+
+/* Font size presets applied when class is added to documentElement */
+.a11y-font-small { font-size: 90%; }
+.a11y-font-medium { font-size: 100%; }
+.a11y-font-large { font-size: 115%; }
+.a11y-font-xlarge { font-size: 130%; }
+
+/* High contrast override via variables */
+.a11y-contrast {
+    --bg: #000;
+    --panel-bg: #000;
+    --text: #fff;
+    --primary: #fff;
+    --btn-outline: #fff;
+    --muted: #111;
+}
+
+/* Reduce motion */
+.reduce-motion *, .reduce-motion *::before, .reduce-motion *::after {
+    animation: none !important;
+    transition: none !important;
+}

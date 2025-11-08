@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Agendamento - Barbearia</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a href="#main" class="skip-link">Pular para o conteúdo</a>
+    <main id="main" class="container" role="main">
+        <div class="a11y-toolbar" aria-label="Controles de acessibilidade">
+            <button id="a11y-font-decrease" aria-label="Diminuir fonte">A-</button>
+            <button id="a11y-font-reset" aria-label="Restaurar fonte">A</button>
+            <button id="a11y-font-increase" aria-label="Aumentar fonte">A+</button>
+            <button id="a11y-contrast" aria-pressed="false" aria-label="Alternar alto contraste">Contraste</button>
+        </div>
+        <div class="logo-container">
+            <img src="assets/Logo_Barbearia_Tizil.jpg" alt="Logo da Barbearia" class="logo">
+        </div>
+        <h1>Agende seu Horário</h1>
+        <p>Selecione uma data para ver os horários disponíveis.</p>
+        
+        <input type="date" id="data-selecionada">
+        
+        <h2>Horários Disponíveis</h2>
+        <div id="horarios-container" class="horarios-grid">
+            </div>
+        
+        <div id="formulario-cliente" class="hidden">
+            <h3>Preencha seus dados</h3>
+            <p>Horário selecionado: <strong id="horario-selecionado-texto"></strong></p>
+            <input type="text" id="nome-cliente" placeholder="Seu nome completo" required>
+            <input type="tel" id="telefone-cliente" placeholder="Seu telefone" required>
+            <button id="btn-confirmar-agendamento">Confirmar Agendamento</button>
+        </div>
+    </div>
+    
+    <script src="a11y.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
